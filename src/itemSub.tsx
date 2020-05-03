@@ -6,7 +6,7 @@ import { document, trash, remove} from 'ionicons/icons';
 interface Props {
     doEdit: any;
     doDelete:any;
-    doc:any
+    doc:any;
     doRemove:any;
 }
 
@@ -49,12 +49,12 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doRemove,doc}) => {
                 </IonLabel>
             </IonItem>
             <IonItemOptions>
-                <IonItemOption onClick={() => {
+                {/* <IonItemOption onClick={() => {
                     doEdit(doc.id);
                     }}>
                         <IonIcon slot="icon-only" icon={document}>
                         </IonIcon>            
-                </IonItemOption>
+                </IonItemOption> */}
                 <IonItemOption onClick={() => {
                     doDelete(doc.id);
                     }}>

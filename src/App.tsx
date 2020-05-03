@@ -40,7 +40,7 @@ import {GetProcessEnvironment} from './react-app-env.d';
 
 //firebase.initializeApp(GetProcessEnvironment());
 
-/* put in separate file and exclue file from get */
+/* put in separate file and exclude file from git */
 var firebaseConfig = {
   apiKey: "AIzaSyCokvSu-X9BcfX-Pcw-4_vblneuB5C-89s",
   authDomain: "realtime-database-4387c.firebaseapp.com",
@@ -64,7 +64,7 @@ const App: React.FC = () => (
           <Route path="/tab3" component={Tab3} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
-        <IonTabBar color="primary" slot="bottom">
+        <IonTabBar color="secondary" slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={list} />
             <IonLabel>Submit</IonLabel>

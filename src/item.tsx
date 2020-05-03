@@ -45,12 +45,12 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doAdd,doc}) => {
                 </IonLabel>
             </IonItem>
             <IonItemOptions>
-                <IonItemOption onClick={() => {
+                {/* <IonItemOption onClick={() => {
                     doEdit(doc.id);
                     }}>
                         <IonIcon slot="icon-only" icon={document}>
                         </IonIcon>            
-                </IonItemOption>
+                </IonItemOption> */}
                 <IonItemOption onClick={() => {
                     doDelete(doc.id);
                     }}>
@@ -97,12 +97,12 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doAdd,doc}) => {
                     </IonLabel>
                 </IonItem>
                 <IonItemOptions>
-                    <IonItemOption onClick={() => {
+                    {/* <IonItemOption onClick={() => {
                         doEdit(doc.id);
                         }}>
                             <IonIcon slot="icon-only" icon={document}>
                             </IonIcon>            
-                    </IonItemOption>
+                    </IonItemOption> */}
                     <IonItemOption onClick={() => {
                         doDelete(doc.id);
                         }}>

@@ -42,7 +42,7 @@ const Tab1: React.FC = () => {
           {}
           
         </IonCard>
-        <ItemList doEdit={setCurrent}/>
+        {/* <ItemList doEdit={setCurrent}/> */}
       </IonContent>
     </IonPage>
   );
