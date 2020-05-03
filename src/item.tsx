@@ -16,7 +16,7 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
 
     return(
         <IonItemSliding>
-            <IonItem>
+            <IonItem color="tertiary">
                 <IonLabel class="ion-text-wrap">
                     <IonText className="item-title">
                         <div>
@@ -63,7 +63,7 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
     else {
         return(
             <IonItemSliding>
-                <IonItem>
+                <IonItem color="tertiary">
                     <IonLabel class="ion-text-wrap">
                         <IonText className="item-title">
                             <div>

@@ -10,7 +10,7 @@ const Tab2: React.FC = () => {
   const [setCurrent] = useState(null);
 
   return (
-    <IonPage>
+    <IonPage color="primary">
       <IonContent>
       <IonHeader>
         <IonToolbar>
