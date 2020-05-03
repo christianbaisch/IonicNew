@@ -56,6 +56,7 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
                      <IonIcon slot="icon-only" icon={trash}>
                     </IonIcon>       
                 </IonItemOption>
+                
             </IonItemOptions>
         </IonItemSliding>
     )

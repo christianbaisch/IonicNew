@@ -11,99 +11,66 @@ interface Props {
 
 const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
     let data = doc.data();
-    if(data.subscribed){
-        if(data.picture){
 
+    if(data.subscribed == true){
+    return(
+        <IonItemSliding>
+            <IonItem>
+                <IonLabel class="ion-text-wrap">
+                    <IonText className="item-title">
+                        <div>
+                            {data.title}
+                        </div>
+                    </IonText>
+                    <IonText className="item-sub-title">
+                        <div>
+                            {data.content}
+                        </div>
+                    </IonText>
+                    <IonText className="item-sub-title">
+                        <div>
+                            {new Date(data.date) + ""}
+                        </div>
+                    </IonText>
+                    <IonText className="item-sub-title">
+                        <div>
+                            {data.location}
+                        </div>
+                    </IonText>
+                    <IonText className="item-sub-title">
+                        <div>
+                            {data.subscribed}
+                        </div>
+                    </IonText>
+                    <IonImg src={data.picture}>
+
+                    </IonImg>   
+                </IonLabel>
+            </IonItem>
+            <IonItemOptions>
+                <IonItemOption onClick={() => {
+                    doEdit(doc.id);
+                    }}>
+                        <IonIcon slot="icon-only" icon={document}>
+                        </IonIcon>            
+                </IonItemOption>
+                <IonItemOption onClick={() => {
+                    doDelete(doc.id);
+                    }}>
+                     <IonIcon slot="icon-only" icon={trash}>
+                    </IonIcon>       
+                </IonItemOption>
+            </IonItemOptions>
+        </IonItemSliding>
+    )
+    
+    }
+    else{
         return(
             <IonItemSliding>
-                <IonItem>
-                    <IonLabel class="ion-text-wrap">
-                        <IonText className="item-title">
-                            <div>
-                                {data.title}
-                            </div>
-                        </IonText>
-                        <IonText className="item-sub-title">
-                            <div>
-                                {data.content}
-                            </div>
-                        </IonText>
-                        <IonText className="item-sub-title">
-                            <div>
-                                {new Date(data.date) + ""}
-                            </div>
-                        </IonText>
-                        <IonText className="item-sub-title">
-                            <div>
-                                {data.location}
-                            </div>
-                        </IonText>
-                        <IonImg src={data.picture}>
 
-                        </IonImg>   
-                    </IonLabel>
-                </IonItem>
-                <IonItemOptions>
-                    <IonItemOption onClick={() => {
-                        doEdit(doc.id);
-                        }}>
-                            <IonIcon slot="icon-only" icon={document}>
-                            </IonIcon>            
-                    </IonItemOption>
-                    <IonItemOption onClick={() => {
-                        doDelete(doc.id);
-                        }}>
-                        <IonIcon slot="icon-only" icon={trash}>
-                        </IonIcon>       
-                    </IonItemOption>
-                </IonItemOptions>
             </IonItemSliding>
         )
-        }
-        else {
-            return(
-                <IonItemSliding>
-                    <IonItem>
-                        <IonLabel class="ion-text-wrap">
-                            <IonText className="item-title">
-                                <div>
-                                    {data.title}
-                                </div>
-                            </IonText>
-                            <IonText className="item-sub-title">
-                                <div>
-                                    {data.content}
-                                </div>
-                            </IonText>
-                            <IonText className="item-sub-title">
-                                <div>
-                                    {new Date(data.date) + ""}
-                                </div>
-                            </IonText>
-                            <IonText className="item-sub-title">
-                                <div>
-                                    {data.location}
-                                </div>
-                            </IonText>  
-                        </IonLabel>
-                    </IonItem>
-                    <IonItemOptions>
-                        <IonItemOption onClick={() => {
-                            doEdit(doc.id);
-                            }}>
-                                <IonIcon slot="icon-only" icon={document}>
-                                </IonIcon>            
-                        </IonItemOption>
-                        <IonItemOption onClick={() => {
-                            doDelete(doc.id);
-                            }}>
-                            <IonIcon slot="icon-only" icon={trash}>
-                            </IonIcon>       
-                        </IonItemOption>
-                    </IonItemOptions>
-                </IonItemSliding>
-            )
-        }
     }
 }
 
