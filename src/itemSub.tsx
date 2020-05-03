@@ -1,15 +1,16 @@
 import React, { useState, useEffect} from 'react';
 import {IonItem, IonLabel, IonText, IonItemSliding,
 IonItemOption, IonItemOptions, IonIcon, IonImg} from '@ionic/react';
-import { document, trash} from 'ionicons/icons';
+import { document, trash, remove} from 'ionicons/icons';
 
 interface Props {
     doEdit: any;
     doDelete:any;
     doc:any
+    doRemove:any;
 }
 
-const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
+const Item: React.FC<Props> = ({doEdit,doDelete,doRemove,doc}) => {
     let data = doc.data();
 
     if(data.subscribed == true){
@@ -60,12 +61,18 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
                      <IonIcon slot="icon-only" icon={trash}>
                     </IonIcon>       
                 </IonItemOption>
+
+                <IonItemOption onClick={() => {
+                    doRemove(doc.id);
+                    }}>
+                     <IonIcon slot="icon-only" icon={remove}>
+                    </IonIcon>       
+                </IonItemOption>
             </IonItemOptions>
         </IonItemSliding>
     )
     
-    }
-    else{
+    } else{
         return(
             <IonItemSliding>
 

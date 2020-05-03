@@ -52,6 +52,7 @@ const ItemList: React.FC<Props> = ({doEdit}) =>
                     doAdd = {
                         i =>
                         {
+                            closeSlidingItems();
                             doAdd(i);
                         }
                     }
