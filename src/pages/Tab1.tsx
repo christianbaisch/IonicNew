@@ -25,7 +25,7 @@ const Tab1: React.FC = () => {
   }
   return (
     <IonPage>
-      <IonContent>
+      <IonContent color="primary">
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1</IonTitle>
@@ -33,7 +33,7 @@ const Tab1: React.FC = () => {
         </IonHeader>
         {}
         <IonCard>
-          <IonCardHeader>
+          <IonCardHeader color = "secondary">
             <h3>Create a Task</h3>
           </IonCardHeader>
           <AddItem2 title={current} clear={() => setCurrent(getEmpty())}/>
