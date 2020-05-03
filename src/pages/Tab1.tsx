@@ -32,7 +32,7 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         {}
-        <IonCard>
+        <IonCard color="tertiary">
           <IonCardHeader color = "secondary">
             <h3>Create a Task</h3>
           </IonCardHeader>

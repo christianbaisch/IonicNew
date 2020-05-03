@@ -18,7 +18,7 @@ const Tab3: React.FC = () => {
           <IonTitle>Find Events</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>    
+      <IonContent color = "tertiary">    
         <IonHeader collapse="condense">
           <IonToolbar>
               <IonTitle size="large">Tab 3</IonTitle>      
