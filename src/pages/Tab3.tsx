@@ -14,17 +14,17 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar  color ="secondary">
           <IonTitle>Find Events</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>    
+      <IonContent color = "tertiary">    
         <IonHeader collapse="condense">
           <IonToolbar>
               <IonTitle size="large">Tab 3</IonTitle>      
           </IonToolbar>
         </IonHeader>
-        <IonSearchbar value={searchText} onIonChange={e => 
+        <IonSearchbar color="primary" value={searchText} onIonChange={e => 
           setSearchText(e.detail.value!)} showCancelButton="focus"></IonSearchbar>
         <IonCard>
           <ItemList doEdit={setCurrent}/>
