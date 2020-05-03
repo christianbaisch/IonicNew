@@ -1,15 +1,16 @@
 import React, { useState, useEffect} from 'react';
 import {IonItem, IonLabel, IonText, IonItemSliding,
 IonItemOption, IonItemOptions, IonIcon, IonImg} from '@ionic/react';
-import { document, trash} from 'ionicons/icons';
+import { document, trash, add} from 'ionicons/icons';
 
 interface Props {
     doEdit: any;
     doDelete:any;
-    doc:any
+    doc:any;
+    doAdd: any;
 }
 
-const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
+const Item: React.FC<Props> = ({doEdit,doDelete,doAdd,doc}) => {
     let data = doc.data();
 
     if(data.picture){
@@ -56,6 +57,13 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
                      <IonIcon slot="icon-only" icon={trash}>
                     </IonIcon>       
                 </IonItemOption>
+
+                <IonItemOption onClick={() => {
+                    doAdd(doc.id);
+                    }}>
+                     <IonIcon slot="icon-only" icon={add}>
+                    </IonIcon>       
+                </IonItemOption>
                 
             </IonItemOptions>
         </IonItemSliding>
@@ -100,6 +108,12 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
                         }}>
                          <IonIcon slot="icon-only" icon={trash}>
                         </IonIcon>       
+                    </IonItemOption>
+                    <IonItemOption onClick={() => {
+                    doAdd(doc.id);
+                    }}>
+                     <IonIcon slot="icon-only" icon={add}>
+                    </IonIcon>       
                     </IonItemOption>
                 </IonItemOptions>
             </IonItemSliding>

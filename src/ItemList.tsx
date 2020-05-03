@@ -24,6 +24,14 @@ const ItemList: React.FC<Props> = ({doEdit}) =>
     {
         firebase.firestore().collection("data").doc(id).delete();
     };
+    const doAdd = id =>
+    {
+        var itemRef = firebase.firestore().collection('data').doc(id);
+
+        var setWithMerge = itemRef.set({
+            subscribed: true
+        }, { merge: true });
+    }
     return (
        <IonList id="list">
            {value && value.docs.map(doc => {
@@ -39,6 +47,12 @@ const ItemList: React.FC<Props> = ({doEdit}) =>
                         {
                             closeSlidingItems();
                             doDelete(i);
+                        }
+                    }
+                    doAdd = {
+                        i =>
+                        {
+                            doAdd(i);
                         }
                     }
                     key = {doc.id}
