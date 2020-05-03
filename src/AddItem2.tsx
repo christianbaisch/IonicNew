@@ -99,14 +99,14 @@ const AddItem2: React.FC<DataProps> = (props, clear) => {
     };
 
     return(
-        <IonCard>
+        <IonCard color="tertiary">
             <IonCardContent>
-                <IonItem>
+                <IonItem color="tertiary">
                     <IonInput value={item.title} placeholder="Title" name="title" onIonChange={updateField}>
 
                     </IonInput>
                 </IonItem>
-                <IonItem>
+                <IonItem color="tertiary">
                     <IonInput value={item.content} placeholder="Content" name="content" onIonChange={updateField}>
 
                     </IonInput>
