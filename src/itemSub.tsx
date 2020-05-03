@@ -15,7 +15,7 @@ const Item: React.FC<Props> = ({doEdit,doDelete,doc}) => {
     if(data.subscribed == true){
     return(
         <IonItemSliding>
-            <IonItem>
+            <IonItem color="tertiary">
                 <IonLabel class="ion-text-wrap">
                     <IonText className="item-title">
                         <div>
