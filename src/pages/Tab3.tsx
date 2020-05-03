@@ -30,11 +30,6 @@ const Tab3: React.FC = () => {
           <ItemList doEdit={setCurrent}/>
         </IonCard>
       </IonContent>
-      <IonFooter>
-        <IonToolbar>
-          Search Text: {searchText ?? '(none)'}
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 };
